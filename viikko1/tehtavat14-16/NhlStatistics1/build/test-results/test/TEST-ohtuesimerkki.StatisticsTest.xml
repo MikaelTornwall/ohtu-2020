@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ohtuesimerkki.StatisticsTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-01-21T16:15:36" hostname="Mikael-MBP-222.home" time="0.016">
+  <properties/>
+  <testcase name="topScorersReturnsListOfCorrectSize" classname="ohtuesimerkki.StatisticsTest" time="0.004"/>
+  <testcase name="teamThatDoesNotExistIsReturnsEmptyList" classname="ohtuesimerkki.StatisticsTest" time="0.001"/>
+  <testcase name="topScorersReturnsEmptyListWithNegativeValue" classname="ohtuesimerkki.StatisticsTest" time="0.0"/>
+  <testcase name="teamContainsCorrectPlayer" classname="ohtuesimerkki.StatisticsTest" time="0.0"/>
+  <testcase name="teamWithCorrectNumberOfPlayersIsReturned" classname="ohtuesimerkki.StatisticsTest" time="0.0"/>
+  <testcase name="nullIsReturnedWhenPlayerDoesNotExist" classname="ohtuesimerkki.StatisticsTest" time="0.001"/>
+  <testcase name="correctPlayerIsReturnedWhenPlayerExists" classname="ohtuesimerkki.StatisticsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
