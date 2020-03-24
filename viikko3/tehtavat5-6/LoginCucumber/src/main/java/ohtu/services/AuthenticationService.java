@@ -25,10 +25,6 @@ public class AuthenticationService {
     }
 
     public boolean createUser(String username, String password) {
-        if (userDao.findByName(username) != null) {
-            return false;
-        }
-
         if (invalid(username, password)) {
             return false;
         }
@@ -40,7 +36,13 @@ public class AuthenticationService {
 
     private boolean invalid(String username, String password) {
         // validity check of username and password
-
+        if (userDao.findByName(username) != null) return true;
+        
+        String re1 = "[a-z]{3,}";
+        String re2 = "^(?=.*\\d)(?=.*[a-zA-Z]).{8,}$";
+        
+        if (!username.matches(re1) || !(password.matches(re2))) return true;
+        
         return false;
     }
 }

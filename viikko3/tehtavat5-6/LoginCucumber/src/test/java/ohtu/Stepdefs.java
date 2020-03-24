@@ -29,6 +29,12 @@ public class Stepdefs {
     public void commandLoginSelected() throws Throwable {
         inputLines.add("login");
     }
+    
+    @Given("^command new is selected$")
+    public void commandNewSelected() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        inputLines.add("new");
+    }
 
     @When("username {string} and password {string} are entered")
     public void usernameAndPasswordAreEntered(String username, String password) {
@@ -43,6 +49,17 @@ public class Stepdefs {
     @Then("system will respond with {string}")
     public void systemWillRespondWith(String expectedOutput) {
         assertTrue(io.getPrints().contains(expectedOutput));
-    }    
-
+    }
+    
+    @Given("user {string} with password {string} is created")
+    public void userWithPasswordIsCreated(String string, String string2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        inputLines.add("new");
+        inputLines.add(string);
+        inputLines.add(string2);
+        
+        io = new StubIO(inputLines);
+        app = new App(io, auth);
+        app.run();
+    }
 }
