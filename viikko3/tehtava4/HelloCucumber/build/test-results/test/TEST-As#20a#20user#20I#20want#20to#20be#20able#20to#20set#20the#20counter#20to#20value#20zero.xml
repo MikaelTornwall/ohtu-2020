@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="As a user I want to be able to set the counter to value zero" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-03-24T12:00:17" hostname="Mikael-MBP-222.home" time="0.016">
+  <properties/>
+  <testcase name="Resetting after one increment" classname="As a user I want to be able to set the counter to value zero" time="0.011"/>
+  <testcase name="Resetting after incrementing with several values" classname="As a user I want to be able to set the counter to value zero" time="0.004"/>
+  <system-out><![CDATA[
+Feature: As a user I want to be able to set the counter to value zero
+Feature: As a user I want to be able to set the counter to value zero
+
+  Scenario: Resetting after one increment ?[90m# src/test/resources/ohtu/resetingCounter.feature:5?[0m
+    ?[32mGiven ?[0m?[32mCounter is initialized?[0m          ?[90m# Stepdefs.counterIsInitialized()?[0m
+    ?[32mWhen ?[0m?[32mit is incremented?[0m                ?[90m# Stepdefs.itIsIncremented()?[0m
+    ?[32mAnd ?[0m?[32mit is reset?[0m                       ?[90m# Stepdefs.itIsReset()?[0m
+    ?[32mThen ?[0m?[32mthe value should be ?[0m?[32m?[1m0?[0m            ?[90m# Stepdefs.theValueShouldBe(Integer)?[0m
+
+  Scenario: Resetting after incrementing with several values ?[90m# src/test/resources/ohtu/resetingCounter.feature:11?[0m
+    ?[32mGiven ?[0m?[32mCounter is initialized?[0m                             ?[90m# Stepdefs.counterIsInitialized()?[0m
+    ?[32mWhen ?[0m?[32mit is incremented by ?[0m?[32m?[1m5?[0m                              ?[90m# Stepdefs.itIsIncrementedBy(Integer)?[0m
+    ?[32mAnd ?[0m?[32mit is reset?[0m                                          ?[90m# Stepdefs.itIsReset()?[0m
+    ?[32mThen ?[0m?[32mthe value should be ?[0m?[32m?[1m0?[0m                               ?[90m# Stepdefs.theValueShouldBe(Integer)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
