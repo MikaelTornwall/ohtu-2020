@@ -44,12 +44,12 @@ public class KassapaateTest {
     @Test
     public void lataaLisaaRahamaaranJosSummaOnPositiivinen() {                
         kassa.lataa(kortti, 5);                       
-        verify(kortti, times(1)).lataa(5);                
+        verify(kortti, times(1)).lataa(eq(5));                
     }
     
     @Test
     public void lataaEiLisaaRahamaaraaJosSummaOnPositiivinen() {                
         kassa.lataa(kortti, -5);                       
-        verify(kortti, times(0)).lataa(-5);                
+        verify(kortti, times(0)).lataa(eq(-5));                
     }      
 }
