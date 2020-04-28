@@ -4,9 +4,7 @@ import java.util.HashMap;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class Komentotehdas {
-    private Sovelluslogiikka sovellus;
-    
+public class Komentotehdas {        
     protected HashMap<Button, Komento> komennot;        
     protected Button plus;
     protected Button miinus;
@@ -14,8 +12,7 @@ public class Komentotehdas {
     protected Button undo;
     
     
-    public Komentotehdas(Sovelluslogiikka sovellus, TextField tuloskentta, TextField syotekentta, Button plus, Button miinus, Button nollaa, Button undo) {
-        this.sovellus = sovellus;
+    public Komentotehdas(Sovelluslogiikka sovellus, TextField tuloskentta, TextField syotekentta, Button plus, Button miinus, Button nollaa, Button undo) {        
         this.komennot = new HashMap<>();
         komennot.put(plus, new Summa(tuloskentta, syotekentta,  nollaa, undo, sovellus));
         komennot.put(miinus, new Erotus(tuloskentta, syotekentta, nollaa, undo, sovellus));

@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 public abstract class Operaatio extends Komento {
     protected int luku;   
     protected int tulos;
+    protected int edellinen = 0;
     
     public Operaatio(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
         super(tuloskentta, syotekentta, nollaa, undo, sovellus);
@@ -19,7 +20,8 @@ public abstract class Operaatio extends Komento {
             this.luku = 0;
         }       
         
-        syotekentta.setText("");
+        this.edellinen = sovellus.tulos();
+        syotekentta.setText("");        
         this.tulos = laske();
         tuloskentta.setText(Integer.toString(tulos));
         
@@ -30,6 +32,21 @@ public abstract class Operaatio extends Komento {
         }
         
         undo.disableProperty().set(false);
+    }
+    
+    @Override
+    public void peru() {
+        sovellus.nollaa();
+        sovellus.plus(edellinen);        
+        tuloskentta.setText(Integer.toString(sovellus.tulos()));
+        
+        if (this.tulos == 0) {
+            nollaa.disableProperty().set(true);
+        } else {
+            nollaa.disableProperty().set(false);
+        }
+        
+        undo.disableProperty().set(true);     
     }
     
     protected abstract int laske();
