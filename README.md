@@ -13,3 +13,5 @@
 [Viikko 5](https://github.com/MikaelTornwall/ohtu-2020/tree/master/viikko5)
 
 [Viikko 5, tehtävä 6](https://github.com/MikaelTornwall/ohtu-2020/blob/master/retro.md)
+
+[Viikko 6](https://github.com/MikaelTornwall/ohtu-2020/tree/master/viikko6)
